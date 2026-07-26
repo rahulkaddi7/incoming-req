@@ -1,0 +1,13 @@
+langchain-google-genai
+langchain
+langchain-community
+python-dotenv
+langgraph
+grandalf
+langchain-groq
+langgraph-checkpoint-sqlite
+langchain-experimental
+fastapi
+uvicorn
+IPython
+sqlalchemy

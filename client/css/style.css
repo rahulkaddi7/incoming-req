@@ -1,0 +1,395 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI,Tahoma,Geneva,Verdana,sans-serif;
+}
+
+body{
+    background:#f4f7fb;
+    color:#222;
+}
+
+.hidden{
+    display:none;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:40px auto;
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    background:#0f172a;
+    color:white;
+
+    padding:18px 50px;
+
+    box-shadow:0 3px 10px rgba(0,0,0,.15);
+}
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    font-weight:500;
+    transition:.2s;
+}
+
+.nav-links a:hover{
+    color:#38bdf8;
+}
+
+.nav-links .active{
+    color:#38bdf8;
+}
+
+.card,
+.chart-card,
+.table-card{
+
+    background:white;
+
+    padding:30px;
+
+    margin-top:25px;
+
+    border-radius:12px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.card h2,
+.chart-card h2,
+.table-card h2{
+    margin-bottom:20px;
+}
+
+textarea{
+
+    width:100%;
+    height:180px;
+
+    padding:18px;
+
+    border-radius:10px;
+    border:1px solid #ccc;
+
+    resize:none;
+
+    font-size:15px;
+
+    outline:none;
+
+}
+
+textarea:focus{
+
+    border:1px solid #2563eb;
+
+}
+
+
+button{
+
+    margin-top:20px;
+
+    background:#2563eb;
+
+    color:white;
+
+    border:none;
+
+    padding:14px 28px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    transition:.25s;
+
+}
+
+button:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-2px);
+
+}
+
+.dashboard-buttons{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+
+    margin:35px 0;
+
+}
+
+.dashboard-buttons button{
+
+    margin:0;
+
+    padding:18px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+}
+
+
+.grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+
+    gap:20px;
+
+    margin:25px 0;
+
+}
+
+.info-box{
+
+    background:#eef5ff;
+
+    padding:18px;
+
+    border-radius:10px;
+
+}
+
+.info-box span{
+
+    display:block;
+
+    color:#666;
+
+    font-size:14px;
+
+    margin-bottom:10px;
+
+}
+
+.info-box strong{
+
+    font-size:17px;
+
+}
+
+.response-box{
+
+    background:#f8fafc;
+
+    border-left:5px solid #2563eb;
+
+    margin-top:15px;
+
+    padding:18px;
+
+    border-radius:8px;
+
+    line-height:1.6;
+
+}
+
+.summary-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:20px;
+
+    margin-bottom:30px;
+
+}
+
+.summary-card{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:12px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+.summary-card h3{
+
+    color:#666;
+
+    margin-bottom:12px;
+
+}
+
+.summary-card p{
+
+    font-size:30px;
+
+    font-weight:bold;
+
+    color:#2563eb;
+
+}
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+thead{
+
+    background:#2563eb;
+
+    color:white;
+
+}
+
+th{
+
+    padding:15px;
+
+    text-align:left;
+
+}
+
+td{
+
+    padding:14px;
+
+    border-bottom:1px solid #eee;
+
+}
+
+tbody tr:hover{
+
+    background:#f5f9ff;
+
+}
+
+.chart-card{
+
+    margin-bottom:30px;
+
+}
+
+canvas{
+
+    max-height:400px;
+
+}
+
+.loader{
+
+    margin:35px auto;
+
+    width:max-content;
+
+    font-size:18px;
+
+    color:#2563eb;
+
+    font-weight:bold;
+
+}
+
+.badge{
+
+    display:inline-block;
+
+    padding:6px 12px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    color:white;
+
+    font-weight:bold;
+
+}
+
+.high{
+
+    background:#dc2626;
+}
+
+.medium{
+
+    background:#d97706;
+}
+
+.low{
+
+    background:#16a34a;
+}
+
+.critical{
+
+    background:#7c3aed;
+}
+
+
+@media(max-width:900px){
+
+    .dashboard-buttons{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:700px){
+
+    .navbar{
+
+        flex-direction:column;
+
+        gap:20px;
+
+        padding:25px;
+
+    }
+
+    .dashboard-buttons{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .summary-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}

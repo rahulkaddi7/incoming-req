@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incoming Request Processing System</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            Incoming Request Processing System
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html" class="active">Process Request</a>
+            <a href="dashboard.html">Dashboard</a>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <div class="card">
+
+            <h2>Submit Request</h2>
+
+            <textarea
+                id="request"
+                placeholder="Enter customer request here..."
+            ></textarea>
+
+            <button type="button" id="submitBtn" onclick="return false;">
+                Process Request
+            </button>
+
+        </div>
+
+        <div id="loader" class="loader hidden">
+            Processing request...
+        </div>
+
+        <div id="resultCard" class="card hidden">
+
+            <h2>Processing Result</h2>
+
+            <div class="grid">
+
+                <div class="info-box">
+                    <span>Classification</span>
+                    <strong id="classification"></strong>
+                </div>
+
+                <div class="info-box">
+                    <span>Urgency</span>
+                    <strong id="urgency"></strong>
+                </div>
+
+                <div class="info-box">
+                    <span>Assigned Team</span>
+                    <strong id="assignedTeam"></strong>
+                </div>
+
+                <div class="info-box">
+                    <span>Status</span>
+                    <strong id="status"></strong>
+                </div>
+
+                <div class="info-box">
+                    <span>Follow Up</span>
+                    <strong id="followUp"></strong>
+                </div>
+
+                <div class="info-box">
+                    <span>High Priority</span>
+                    <strong id="priority"></strong>
+                </div>
+
+            </div>
+
+            <h3>Generated Response</h3>
+
+            <div class="response-box" id="response"></div>
+
+        </div>
+
+    </div>
+
+    <script src="../js/api.js"></script>
+    <script src="../js/process.js"></script>
+
+</body>
+</html>
