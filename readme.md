@@ -39,7 +39,8 @@ I purchased a laptop last week, but it keeps shutting down randomly. I have trie
 ### General Enquiry
 
 ```text
-Can you tell me the warranty period for your premium laptops and whether international shipping is available?
+what are the open hours?
+how to reset password?
 ```
 
 ### Service Request
@@ -52,12 +53,6 @@ I would like to schedule a maintenance visit for my air conditioner next Monday.
 
 ```text
 I raised a complaint about my damaged refrigerator two weeks ago, but no one has contacted me yet. Please escalate this issue to the senior support team immediately.
-```
-
-### High Priority
-
-```text
-Our production server has been down for the last 30 minutes, and customers are unable to access our services. This requires immediate attention.
 ```
 
 ---
